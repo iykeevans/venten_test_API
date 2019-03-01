@@ -1,13 +1,6 @@
-const db = [
-  {
-    id: 1,
-    Name: 'Vans',
-    Description: 'an awesome shoe for any event',
-    Price: 100,
-    Category: 'luxury',
-    image: 'https://images.unsplash.com/photo-1512327536842-5aa37d1ba3e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
-    Color: 'silver'
-  }
-];
+const pgp = require('pg-promise')();
+
+const connectionString = 'postgres://trnluohn:PG5k_I45pMxP13fpSmTCqOI5DCMtamod@stampy.db.elephantsql.com:5432/trnluohn'
+const db = pgp(connectionString);
 
 module.exports = db;
