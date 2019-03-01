@@ -1,12 +1,8 @@
 const db = require('../mockDB/db')
 
 class Store {
-  static getProducts(req, res) {
-    const data = [];
-    db.forEach(product => {
-      const { id, Name, Price} = product;
-      data.push({ id, Name, Price});
-    });
+  static async getProducts(req, res) {
+    const data = await db.any('select id, name, price from shoes')
     if(db.length === 0) {
       return res.status(404).json({
         status: 404,
@@ -19,9 +15,9 @@ class Store {
     })
   }
 
-  static getProduct(req, res) {
+  static async getProduct(req, res) {
     const { id } = req.params;
-    const data = db.find(product => product.id === Number(id));
+    const data = await db.one('select * from shoes where id = $1', Number(id))
     if (data) {
       return res.json({
         status: 200,

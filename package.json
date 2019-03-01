@@ -21,7 +21,8 @@
   "homepage": "https://github.com/iykeevans/venten_test_API#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "pg-promise": "^8.5.6"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
