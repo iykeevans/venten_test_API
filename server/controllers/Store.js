@@ -21,7 +21,7 @@ class Store {
 
   static getProduct(req, res) {
     const { id } = req.params;
-    const data = db.find(product => product.id === id);
+    const data = db.find(product => product.id === Number(id));
     if (data) {
       return res.json({
         status: 200,
