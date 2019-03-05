@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Get static files from react app
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 // Use routes
 app.use(routes);
