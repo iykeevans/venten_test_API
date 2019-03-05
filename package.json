@@ -1,0 +1,33 @@
+{
+  "name": "venten_test_API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/app",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "dev": "nodemon server/app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iykeevans/venten_test_API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iykeevans/venten_test_API/issues"
+  },
+  "homepage": "https://github.com/iykeevans/venten_test_API#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "pg-promise": "^8.5.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
